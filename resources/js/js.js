@@ -45,10 +45,19 @@
         $('.videos-block .owl-carousel')
             .once('carousel')
             .owlCarousel({
-                items: 3,
                 nav: false,
                 dots: true,
                 margin: 50,
+                responsive: {
+                    0: {
+                        margin: 16,
+                        items: 1,
+                    },
+                    1200: {
+                        margin: 50,
+                        items: 3,
+                    },
+                },
             });
 
 
@@ -59,6 +68,16 @@
                 nav: false,
                 dots: true,
                 margin: 50,
+                responsive: {
+                    0: {
+                        margin: 16,
+                        items: 1,
+                    },
+                    1200: {
+                        margin: 50,
+                        items: 3,
+                    },
+                },
             });
 
 
@@ -92,11 +111,38 @@
                 $this.css('background', color);
             });
 
+
+        $('#back-2-top')
+            .once('back-2-top')
+            .click(function (e) {
+                e.preventDefault();
+
+                $('html, body').animate({
+                    scrollTop: 0,
+                }, 500);
+            })
+            .on('checkVisible', function () {
+                let $this = $(this);
+
+                ($(window).scrollTop() > 100) ? $this.addClass('visible') : $this.removeClass('visible');
+            })
+            .trigger('checkVisible');
+
+
+        $('[data-mobile-menu-toggle]')
+            .once('mobile-menu-toggle')
+            .click(function (e) {
+                e.preventDefault();
+
+                $('[data-mobile-menu-block]').toggleClass('visible');
+            });
+
     }
 
 
     $(window).scroll(function () {
         $('.header-block').trigger('checkFixed');
+        $('#back-2-top').trigger('checkVisible');
     });
 
 

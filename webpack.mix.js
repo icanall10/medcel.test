@@ -12,7 +12,6 @@ mix
     .less('resources/less/fonts.less', 'resources/css/')
     .less('resources/less/icons.less', 'resources/css/')
     .less('resources/less/style.less', 'resources/css/')
-    .less('resources/less/tablet.less', 'resources/css/')
     .less('resources/less/mobile.less', 'resources/css/');
 
 mix.styles([
@@ -24,7 +23,6 @@ mix.styles([
     'resources/vendor/owl-carousel/assets/owl.carousel.min.css',
     'resources/vendor/fancybox/fancybox.css',
     'resources/css/style.css',
-    'resources/css/tablet.css',
     'resources/css/mobile.css'
 ], 'public/css/all.css');
 
