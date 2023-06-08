@@ -816,6 +816,7 @@ input[type="checkbox"] {
 .promo-block {
     .inner {
         padding: 50px 0;
+        position: relative;
 
         .title {
             font-size: 45px;
@@ -880,6 +881,21 @@ input[type="checkbox"] {
                 &:hover {
                     transform: scale(0.97);
                 }
+            }
+        }
+
+        .namo {
+            position: absolute;
+            bottom: 50px;
+            right: 0;
+
+            width: 100px;
+            height: 100px;
+
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
             }
         }
     }
@@ -2267,7 +2283,7 @@ body > [data-modal] {
     position: fixed;
     z-index: 5;
 
-    left: 30px;
+    right: 30px;
     bottom: 30px;
 
     border-radius: 100px;
@@ -2281,5 +2297,93 @@ body > [data-modal] {
     .i {
         width: 50px;
         height: 50px;
+    }
+}
+
+
+.mobile-footer-block {
+    position: fixed;
+    z-index: 20;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0;
+    overflow: hidden;
+
+    transition: 0.3s;
+
+    &.visible {
+        padding-top: 8px;
+        height: 54px;
+    }
+
+    .block-content {
+        height: 54px;
+
+        padding: 7px 0;
+        background: #fff;
+        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+
+        .inner {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+            align-items: center;
+            box-sizing: border-box;
+
+            text-align: center;
+            font-size: 14px;
+            line-height: 1.2;
+
+            a {
+                color: var(--color-main);
+            }
+
+            .order {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+                .i {
+                    width: 20px;
+                    height: 20px;
+
+                    margin-bottom: 3px;
+
+                    position: relative;
+                    top: 1px;
+                }
+            }
+
+            .phone {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+
+.float-menu-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    z-index: 20;
+    top: 10px;
+    right: 10px;
+
+    width: 56px;
+    height: 56px;
+    background: #fff;
+    border-radius: 100px;
+
+    opacity: 1;
+    transition: 0.3s;
+
+    &:not(.visible) {
+        display: none;
+        opacity: 0;
     }
 }

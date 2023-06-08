@@ -181,6 +181,8 @@
             }
 
             .center {
+                overflow: auto;
+
                 .menu {
                     a {
                         color: #000 !important;
@@ -200,13 +202,14 @@
 
             .footer {
                 .phone {
-                    margin-bottom: 16px;
+                    margin-bottom: 12px;
                     text-align: center;
 
                     a {
-                        color: var(--color-text);
-                        font-weight: 500;
                         text-align: center;
+                        font-weight: bold;
+                        color: var(--color-main-dark);
+                        font-size: 18px;
                     }
                 }
 
@@ -509,11 +512,18 @@
 
             .order {
                 display: block;
+                margin-top: 100px;
 
                 a {
                     padding: 0 30px;
                     min-height: 50px;
                 }
+            }
+
+            .namo {
+                width: 80px;
+                height: 80px;
+                bottom: 90px;
             }
         }
     }
@@ -598,6 +608,144 @@
 
             .item-rules {
                 font-size: 13px;
+            }
+        }
+    }
+
+    #back-2-top {
+        display: none;
+    }
+
+
+    .menu {
+        &,
+        .inner {
+            & > ul {
+                & > li {
+                    position: relative;
+
+                    &.parent {
+                        & > a {
+
+                        }
+                    }
+
+                    &:not(.open) {
+                        & > ul {
+                            display: none;
+                        }
+                    }
+
+                    & > ul {
+                        position: static;
+                        z-index: 10;
+
+                        top: auto;
+                        left: auto;
+                        margin-left: 0;
+                        margin-top: 0;
+
+                        width: auto;
+                        background: none;
+                        border-radius: 0;
+                        box-shadow: none;
+                        padding: 10px 0 5px;
+
+                        opacity: 1;
+                        visibility: visible;
+                        transition-property: unset;
+                        transition-duration: unset;
+                        transition-delay: unset;
+
+                        & > li {
+                            &:not(:last-child) {
+                                margin-bottom: 12px;
+                            }
+
+                            &:not(.open) {
+                                ul {
+                                    display: none;
+                                }
+                            }
+
+                            &.parent {
+                                &.open {
+                                    & > a {
+                                        &:after {
+                                            margin-left: -24px;
+                                            transform: rotate(180deg);
+                                        }
+                                    }
+                                }
+
+                                & > a {
+                                    display: block;
+                                    position: relative;
+
+                                    &:after {
+                                        margin-left: -20px;
+
+                                        left: 100%;
+                                        top: 50%;
+                                        border: solid transparent;
+                                        content: "";
+                                        height: 0;
+                                        width: 0;
+                                        position: absolute;
+                                        pointer-events: none;
+                                        border-color: rgba(0, 0, 0, 0);
+                                        border-left-color: #000;
+                                        border-width: 3px;
+                                        margin-top: -3px;
+
+                                        transition: 0.2s;
+                                    }
+                                }
+                            }
+
+                            & > a {
+                                display: block;
+                                padding: 0 0 0 20px;
+                                line-height: 1.3;
+                                font-size: 16px;
+
+                                transition: 0.3s;
+
+                                &:hover {
+                                    color: var(--color-main);
+                                    text-decoration: underline;
+
+                                    &:after {
+                                        border-left-color: var(--color-main);
+                                    }
+                                }
+                            }
+
+                            ul {
+                                position: static;
+                                left: auto;
+                                padding: 10px 0 5px;
+
+                                min-height: unset;
+                                min-width: unset;
+
+                                border-radius:0;
+                                box-shadow: none;
+                                clip-path: unset;
+
+                                &:before {
+                                    display: none;
+                                }
+
+                                li {
+                                    a {
+                                        padding: 0 0 0 40px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
