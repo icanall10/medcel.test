@@ -2387,3 +2387,26 @@ body > [data-modal] {
         opacity: 0;
     }
 }
+
+
+
+@media screen and (max-width: 1560px) and (min-width: 1201px) {
+    .header-block {
+        .float {
+            grid-template-columns: minmax(0, 1fr) auto;
+            gap: 0;
+
+            top: -100px;
+            height: 100px;
+            box-sizing: border-box;
+
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            .menu {
+                grid-column: span 2;
+                grid-row-start: 2;
+            }
+        }
+    }
+}
