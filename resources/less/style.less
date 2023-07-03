@@ -3188,3 +3188,45 @@ body > [data-modal] {
         }
     }
 }
+
+
+.prices-block {
+    .text {
+        margin-top: 40px;
+        color: #666;
+    }
+}
+
+.prices-table {
+    table {
+        width: 100%;
+        border-collapse: collapse;
+
+        tr {
+            border-top: 1px solid var(--color-main);
+            border-bottom: 1px solid var(--color-main);
+
+            td {
+                font-size: 20px;
+                padding: 10px 10px 10px 0;
+                border: none;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &.td-order {
+                    text-align: right;
+
+                    a {
+                        color: var(--color-main);
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

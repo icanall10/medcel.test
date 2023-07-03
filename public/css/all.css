@@ -2568,6 +2568,35 @@ body > [data-modal] {
 .testimony-2-block .inner .items .item .text {
   line-height: 1.33;
 }
+.prices-block .text {
+  margin-top: 40px;
+  color: #666;
+}
+.prices-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.prices-table table tr {
+  border-top: 1px solid var(--color-main);
+  border-bottom: 1px solid var(--color-main);
+}
+.prices-table table tr td {
+  font-size: 20px;
+  padding: 10px 10px 10px 0;
+  border: none;
+}
+.prices-table table tr td:last-child {
+  margin-right: 0;
+}
+.prices-table table tr td.td-order {
+  text-align: right;
+}
+.prices-table table tr td.td-order a {
+  color: var(--color-main);
+}
+.prices-table table tr td.td-order a:hover {
+  text-decoration: underline;
+}
 
 
 @media screen and (max-width: 1200px) {
