@@ -280,6 +280,17 @@ animateIn:!1},e.prototype.swap=function(){if(1===this.core.settings.items&&a.sup
                 });
             });
 
+
+        $('.works-block .toggle')
+            .once()
+            .click(function (e) {
+                e.preventDefault();
+
+                $(this)
+                    .closest('.work')
+                    .toggleClass('visible');
+            });
+
     }
 
 

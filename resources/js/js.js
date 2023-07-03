@@ -165,6 +165,17 @@
                 });
             });
 
+
+        $('.works-block .toggle')
+            .once()
+            .click(function (e) {
+                e.preventDefault();
+
+                $(this)
+                    .closest('.work')
+                    .toggleClass('visible');
+            });
+
     }
 
 

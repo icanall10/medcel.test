@@ -326,6 +326,12 @@ button.big,
   min-height: 80px;
   font-size: 18px;
 }
+button.white,
+.button.white {
+  background: none;
+  border: 2px solid var(--color-main);
+  color: var(--color-main);
+}
 input[type="checkbox"] {
   display: none;
 }
@@ -1523,6 +1529,11 @@ body > [data-modal] {
 .services-block .inner .info {
   width: 380px;
 }
+.services-block .inner .info .title {
+  font-size: 44px;
+  line-height: 1.15;
+  margin-bottom: 30px;
+}
 .services-block .inner .info .text {
   margin-bottom: 30px;
 }
@@ -1541,6 +1552,15 @@ body > [data-modal] {
 }
 .services-block .inner .services ul li a {
   text-decoration: underline;
+}
+.services-block .actions {
+  margin-top: 50px;
+}
+.services-block .actions .actions-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
 }
 .service-block2 .inner {
   display: grid;
@@ -2596,6 +2616,55 @@ body > [data-modal] {
 }
 .prices-table table tr td.td-order a:hover {
   text-decoration: underline;
+}
+.works-block .works {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 35px;
+}
+.works-block .works .work:not(.visible) .img img {
+  filter: blur(20px);
+}
+.works-block .works .work.visible .img .toggle .button {
+  opacity: 0;
+}
+.works-block .works .work .img {
+  height: 310px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+.works-block .works .work .img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.3s;
+}
+.works-block .works .work .img .toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.works-block .works .work .img .toggle .button {
+  box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+.works-block .works .work .text {
+  margin-top: 25px;
+  font-size: 20px;
+}
+.works-block .works .work .text strong {
+  color: var(--color-main);
+}
+.works-block .works .work .text p:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 
