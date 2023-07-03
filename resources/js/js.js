@@ -47,17 +47,11 @@
         $('.videos-block .owl-carousel')
             .once('carousel')
             .owlCarousel({
-                nav: false,
-                dots: true,
-                margin: 50,
-                responsive: {
+                nav: false, dots: true, margin: 50, responsive: {
                     0: {
-                        margin: 16,
-                        items: 1,
-                    },
-                    1200: {
-                        margin: 50,
-                        items: 3,
+                        margin: 16, items: 1,
+                    }, 1200: {
+                        margin: 50, items: 3,
                     },
                 },
             });
@@ -66,18 +60,11 @@
         $('.reviews-block .owl-carousel')
             .once('carousel')
             .owlCarousel({
-                items: 3,
-                nav: false,
-                dots: true,
-                margin: 50,
-                responsive: {
+                items: 3, nav: false, dots: true, margin: 50, responsive: {
                     0: {
-                        margin: 16,
-                        items: 1,
-                    },
-                    1200: {
-                        margin: 50,
-                        items: 3,
+                        margin: 16, items: 1,
+                    }, 1200: {
+                        margin: 50, items: 3,
                     },
                 },
             });
@@ -87,8 +74,7 @@
             .once('color', function () {
                 let $this = $(this);
 
-                let colors = [
-                    '#FF0000', // Красный
+                let colors = ['#FF0000', // Красный
                     '#FF9900', // Оранжевый
                     '#00FF00', // Зеленый
                     '#00FFFF', // Бирюзовый
@@ -147,6 +133,26 @@
                 .closest('li')
                 .toggleClass('open');
         });
+
+
+        $('.take-care-block [data-doctor]')
+            .once('doctor')
+            .click(function (e) {
+                e.preventDefault();
+
+                let $this = $(this);
+
+                let id = $this.attr('data-doctor');
+                let slider = $this.closest('[data-slider]');
+                let doctors = slider.find('.doctors .doctor');
+                let details = slider.find('.detail .doctor');
+
+                doctors.removeClass('active');
+                $this.addClass('active');
+
+                details.removeClass('active');
+                details.filter('[data-detail="' + id + '"]').addClass('active');
+            });
 
     }
 
