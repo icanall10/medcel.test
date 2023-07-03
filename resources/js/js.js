@@ -154,6 +154,17 @@
                 details.filter('[data-detail="' + id + '"]').addClass('active');
             });
 
+
+        $('[data-tooltip]')
+            .once('tooltip', function () {
+                let $this = $(this);
+
+                tippy(this, {
+                    content: $this.attr('data-tooltip'),
+                    theme: 'light',
+                });
+            });
+
     }
 
 

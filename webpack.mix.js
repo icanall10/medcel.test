@@ -32,6 +32,8 @@ mix.scripts([
     'resources/vendor/jquery-ui-1.13.1.custom/jquery-ui.min.js',
     'resources/vendor/owl-carousel/owl.carousel.min.js',
     'resources/vendor/fancybox/fancybox.umd.js',
+    'resources/vendor/tippy/popper.min.js',
+    'resources/vendor/tippy/tippy.min.js',
     'resources/js/helpers.js',
     'resources/js/modal.js',
     'resources/js/js.js',
