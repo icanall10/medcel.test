@@ -28,6 +28,172 @@ html {
     }
 }
 
+@media screen and (min-width: 1200px) {
+    #content {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        gap: 30px;
+
+        margin-top: 50px;
+        margin-bottom: 50px;
+
+        #left {
+            width: 280px;
+        }
+
+        #center {
+            .container {
+                width: auto;
+                margin-left: unset;
+                margin-right: unset;
+            }
+
+            .block {
+                &:first-child {
+                    margin-top: 0;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                &.grid-bg {
+                    background: none;
+                    padding-top: 0;
+                    padding-bottom: 0;
+                }
+
+                &.grey {
+                    background: none;
+                    padding-top: 0;
+                    padding-bottom: 0;
+                }
+            }
+
+            .doctors-grid {
+                gap: 20px;
+            }
+
+            .testimony-block {
+                overflow: visible;
+
+                .items {
+                    gap: 20px;
+
+                    .line1 {
+                        display: none;
+                    }
+                }
+            }
+
+            .services-block {
+                .inner {
+                    .info {
+                        width: auto;
+
+                        .title {
+                            font-size: 38px;
+                        }
+                    }
+                }
+            }
+
+            .works-block {
+                .works {
+                    gap: 20px;
+
+                    .work {
+                        .img {
+                            .toggle {
+                                .button {
+                                    padding: 0 22px;
+                                    font-size: 14px;
+                                    min-height: 48px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .method-block {
+                .method {
+                    .img {
+                        height: auto;
+                        width: 400px;
+                        aspect-ratio: 540 / 390;
+                    }
+                }
+            }
+
+            .methods-block {
+                .methods {
+                    gap: 20px;
+                }
+            }
+
+            .text-block {
+                .box {
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                    gap: 20px;
+                }
+            }
+
+            .columns-block {
+                .columns {
+                    gap: 30px;
+                }
+            }
+
+            .take-care-block {
+                .slider {
+                    gap: 20px;
+
+                    .doctors {
+                        width: 280px;
+
+                        .doctor {
+                            .img {
+                                width: 70px;
+                                height: 70px;
+                            }
+                        }
+                    }
+
+                    .detail {
+                        .doctor {
+                            .img {
+                                width: 260px;
+                            }
+
+                            .info {
+                                .experience-and-certificates {
+                                    flex-direction: column;
+                                    gap: 5px;
+                                }
+
+                                .items {
+                                    .item {
+                                        .text {
+                                            font-size: 16px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .order {
+                                a {
+                                    padding: 0 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 a {
     color: #000;
@@ -2651,9 +2817,8 @@ body > [data-modal] {
     .slider {
         display: grid;
         grid-template-columns: auto minmax(0, 1fr);
+        align-items: flex-start;
         gap: 40px;
-
-        min-height: 502px;
 
         .doctors {
             display: grid;
@@ -2720,11 +2885,14 @@ body > [data-modal] {
                 .info {
                     .name {
                         font-size: 20px;
-                        margin-bottom: 5px;
+                        line-height: 1.25;
+
+                        margin-bottom: 7px;
                     }
 
                     .work {
                         font-size: 14px;
+                        line-height: 1.25;
                     }
                 }
             }
@@ -2740,6 +2908,8 @@ body > [data-modal] {
                 border-radius: 40px;
                 overflow: hidden;
                 box-shadow: 0 5px 10px 0 rgba(51, 51, 51, 0.1);
+
+                min-height: 502px;
 
                 &:not(.active) {
                     display: none;
@@ -2983,7 +3153,7 @@ body > [data-modal] {
                 align-items: flex-start;
                 flex-wrap: wrap;
 
-                gap: 50px;
+                gap: 16px 40px;
 
                 margin: 30px 0;
 
@@ -3590,7 +3760,7 @@ body > [data-modal] {
         gap: 30px;
 
         &:not(:last-child) {
-            margin-bottom: 30px;
+            margin-bottom: 1.3em;
         }
 
         .img {
@@ -3650,7 +3820,6 @@ body > [data-modal] {
             align-items: center;
             justify-content: center;
 
-            font-size: 17px;
             font-weight: 400;
             padding: 14px 22px;
             box-sizing: border-box;
@@ -3668,7 +3837,7 @@ body > [data-modal] {
             &:last-child {
                 border-radius: 0 20px 20px 0;
             }
-            
+
             &.active {
                 background: var(--color-main);
                 color: #fff;
@@ -3692,6 +3861,44 @@ body > [data-modal] {
     [data-tab-content] {
         &:not(.active) {
             display: none;
+        }
+    }
+}
+
+
+.sidebar-menu-block {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px 0 rgba(20, 20, 20, 0.15);
+
+    ul {
+        li {
+            &:not(:last-child) {
+                border-bottom: 1px solid #e1e1e1;
+            }
+
+            &.active {
+                background: var(--color-main);
+                border-color: var(--color-main);
+
+                position: relative;
+                z-index: 1;
+
+                a {
+                    color: #fff !important;
+                    cursor: default;
+                }
+            }
+
+            a {
+                display: block;
+                padding: 10px 16px;
+
+                &:hover {
+                    color: var(--color-main-dark);
+                }
+            }
         }
     }
 }

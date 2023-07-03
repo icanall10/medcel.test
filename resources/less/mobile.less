@@ -22,12 +22,24 @@
         }
     }
 
+    h1 {
+        font-size: 24px;
+        margin: 0 0 30px;
+    }
+
+    .page {
+        margin: 20px 0;
+    }
 
     .block {
-        margin: 45px 0;
+        margin: 30px 0;
 
         &.grid-bg {
-            padding: 45px 0;
+            padding: 30px 0;
+        }
+
+        &.grey {
+            padding: 30px 0;
         }
     }
 
@@ -511,10 +523,25 @@
 
             .title {
                 font-size: 24px;
+
+                &.big {
+                    font-size: 24px;
+                }
+            }
+
+            .text {
+                font-size: 16px;
+            }
+
+            .price {
+                font-size: 24px;
             }
 
             .order {
-                display: block;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
                 margin-top: 100px;
 
                 a {
@@ -753,6 +780,282 @@
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+
+    .promo-block {
+        .inner {
+            .order {
+                margin-top: 20px;
+            }
+
+            .doctor {
+                position: static;
+                width: auto;
+
+                margin-top: 20px;
+
+                .img {
+                    position: static;
+
+                    width: 100%;
+                    height: auto;
+                }
+
+                .info {
+                    min-width: unset;
+                    left: 0;
+                    right: 0;
+                }
+            }
+        }
+    }
+
+    .take-care-block {
+        .slider {
+            grid-template-columns: minmax(0, 1fr);
+            gap: 16px;
+
+            .doctors {
+                width: auto;
+                gap: 16px;
+
+                .doctor {
+                    gap: 16px;
+                    padding: 16px;
+
+                    .img {
+                        width: 60px;
+                        height: 60px;
+                    }
+                }
+            }
+
+            .detail {
+                .doctor {
+                    grid-template-columns: minmax(0, 1fr);
+                    gap: 0;
+
+                    border-radius: 16px;
+                    min-height: unset;
+
+                    .img {
+                        width: auto;
+                        height: auto;
+                        aspect-ratio: 300 / 400;
+                    }
+
+                    .info {
+                        padding: 20px;
+
+                        .experience-and-certificates {
+                            flex-direction: column;
+                            gap: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    .testimony-block {
+        .items {
+            grid-template-columns: minmax(0, 1fr);
+            gap: 16px;
+
+            .line1,
+            .line2 {
+                display: none;
+            }
+
+            .item {
+                padding: 20px;
+            }
+        }
+    }
+
+    .testimony-2-block {
+        .inner {
+            padding: 20px;
+
+            .items {
+                grid-template-columns: minmax(0, 1fr);
+                gap: 40px;
+            }
+        }
+    }
+
+    .prices-table {
+        tr {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+
+            padding: 5px 0;
+            margin-bottom: -1px;
+
+            td {
+                text-align: left !important;
+                width: auto !important;
+                padding: 2px 0 !important;
+                font-size: 16px !important;
+            }
+        }
+    }
+
+    .services-block {
+        .inner {
+            .info {
+                .title {
+                    font-size: 24px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .actions {
+            .actions-inner {
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 10px;
+            }
+        }
+    }
+
+    .works-block {
+        .works {
+            grid-template-columns: minmax(0, 1fr);
+            gap: 20px;
+
+            .work {
+                .img {
+                    .toggle {
+                        left: 20px;
+                        right: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .results-block {
+        .inner {
+            padding: 20px;
+
+            .items {
+                grid-template-columns: minmax(0, 1fr);
+                gap: 30px;
+
+                margin-top: 0;
+            }
+        }
+    }
+
+    .method-block {
+        .method {
+            grid-template-columns: minmax(0, 1fr);
+            gap: 20px;
+
+            .img {
+                width: auto;
+                height: auto;
+                aspect-ratio: 540 / 390;
+            }
+        }
+    }
+
+    .what-treat-block {
+        .content {
+            grid-template-columns: minmax(0, 1fr);
+            gap: 20px;
+
+            margin-top: 0;
+
+            .corner {
+                display: none;
+            }
+
+            .info {
+                .items {
+                    display: grid;
+                    grid-template-columns: minmax(0, 1fr);
+                    gap: 7px;
+
+                    margin-bottom: 30px;
+
+                    .item {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    .methods-block {
+        .methods {
+            grid-template-columns: minmax(0, 1fr);
+            gap: 20px;
+        }
+    }
+
+    .text-block {
+        .box {
+            grid-template-columns: minmax(0, 1fr) !important;
+            gap: 20px !important;
+        }
+    }
+
+    .columns-block {
+        .columns {
+            grid-template-columns: minmax(0, 1fr) !important;
+            gap: 20px;
+
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .sidebar-menu-block {
+        display: none;
+    }
+
+    .advantages-2-block {
+        .advantages {
+            grid-template-columns: minmax(0, 1fr);
+            gap: 30px;
+
+            padding: 20px;
+        }
+    }
+
+    .prices-page {
+        .title {
+            font-size: 20px;
+        }
+
+        .tabs {
+            flex-direction: column;
+
+            border: 1px solid var(--color-main);
+            border-radius: 8px;
+            overflow: hidden;
+
+            a {
+                border-radius: 0 !important;
+                border: none;
+                padding: 10px 16px;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid var(--color-main);
+                }
+
+                br {
+                    display: none;
                 }
             }
         }
