@@ -3333,3 +3333,40 @@ body > [data-modal] {
         }
     }
 }
+
+
+.results-block {
+    .inner {
+        max-width: 1160px;
+        box-sizing: border-box;
+
+        padding: 40px 60px;
+        border-radius: 20px;
+        background: #fff;
+        box-shadow: 0 5px 10px 0 rgba(20, 20, 20, 0.2);
+
+        .items {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 60px 50px;
+
+            margin-top: 60px;
+
+            .item {
+                &:before {
+                    display: block;
+                    content: '';
+
+                    height: 2px;
+                    width: 100px;
+                    background: var(--color-main);
+                    margin-bottom: 10px;
+                }
+
+                .text {
+                    line-height: 1.35;
+                }
+            }
+        }
+    }
+}

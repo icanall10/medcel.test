@@ -2666,6 +2666,31 @@ body > [data-modal] {
 .works-block .works .work .text p:not(:last-child) {
   margin-bottom: 20px;
 }
+.results-block .inner {
+  max-width: 1160px;
+  box-sizing: border-box;
+  padding: 40px 60px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 5px 10px 0 rgba(20, 20, 20, 0.2);
+}
+.results-block .inner .items {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 60px 50px;
+  margin-top: 60px;
+}
+.results-block .inner .items .item:before {
+  display: block;
+  content: '';
+  height: 2px;
+  width: 100px;
+  background: var(--color-main);
+  margin-bottom: 10px;
+}
+.results-block .inner .items .item .text {
+  line-height: 1.35;
+}
 
 
 @media screen and (max-width: 1200px) {
