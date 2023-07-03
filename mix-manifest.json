@@ -28,6 +28,10 @@
     "/public/img/line2.svg": "/public/img/line2.svg",
     "/public/img/logo.png": "/public/img/logo.png",
     "/public/img/method.jpg": "/public/img/method.jpg",
+    "/public/img/method1.jpg": "/public/img/method1.jpg",
+    "/public/img/method2.jpg": "/public/img/method2.jpg",
+    "/public/img/method3.jpg": "/public/img/method3.jpg",
+    "/public/img/method4.jpg": "/public/img/method4.jpg",
     "/public/img/namo.png": "/public/img/namo.png",
     "/public/img/rating1.png": "/public/img/rating1.png",
     "/public/img/rating2.png": "/public/img/rating2.png",
@@ -55,8 +59,9 @@
     "/public/img/video1.svg": "/public/img/video1.svg",
     "/public/img/video2.svg": "/public/img/video2.svg",
     "/public/img/video3.svg": "/public/img/video3.svg",
-    "/public/css/all.css": "/public/css/all.css",
-    "/public/js/all.js": "/public/js/all.js",
+    "/public/img/what-treat.svg": "/public/img/what-treat.svg",
     "/public/img/work1.jpg": "/public/img/work1.jpg",
-    "/public/img/work2.jpg": "/public/img/work2.jpg"
+    "/public/img/work2.jpg": "/public/img/work2.jpg",
+    "/public/css/all.css": "/public/css/all.css",
+    "/public/js/all.js": "/public/js/all.js"
 }
