@@ -2204,4 +2204,100 @@ body > [data-modal] {
 .tippy-box[data-theme~='light'][data-placement^='right'] > .tippy-arrow::before {
   border-right-color: #fff;
 }
+.testimony-block {
+  overflow: hidden;
+}
+.testimony-block .items {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+}
+.testimony-block .items .line1 {
+  position: absolute;
+  z-index: -1;
+  top: 77px;
+  left: 496px;
+  width: 1029px;
+  height: 667px;
+}
+.testimony-block .items .line1 img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.testimony-block .items .line2 {
+  position: absolute;
+  z-index: 2;
+  top: -2px;
+  left: 50%;
+  margin-left: -100px;
+  width: 86px;
+  height: 86px;
+  filter: brightness(800%);
+}
+.testimony-block .items .line2 img {
+  width: 100%;
+  height: 100%;
+  transform: rotate(179deg);
+}
+.testimony-block .items .item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: 30px;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 0 5px 10px 0 rgba(51, 51, 51, 0.2);
+  padding: 26px;
+}
+.testimony-block .items .item.active {
+  background: var(--color-main);
+  color: #fff;
+}
+.testimony-block .items .item.active .info .text ul li:before {
+  background: #fff;
+}
+.testimony-block .items .item.active .order a {
+  color: #fff;
+}
+.testimony-block .items .item.active .order a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+.testimony-block .items .item .info .name {
+  font-size: 21px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.testimony-block .items .item .info .text p:not(:last-child) {
+  margin-bottom: 16px;
+}
+.testimony-block .items .item .info .text ul li {
+  position: relative;
+  padding-left: 16px;
+}
+.testimony-block .items .item .info .text ul li:before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 9px;
+  width: 5px;
+  height: 5px;
+  background: #222;
+  border-radius: 100px;
+}
+.testimony-block .items .item .info .text ul li:not(:last-child) {
+  margin-bottom: 2px;
+}
+.testimony-block .items .item .order {
+  display: flex;
+}
+.testimony-block .items .item .order a {
+  font-weight: bold;
+}
+.testimony-block .items .item .order a:hover {
+  color: var(--color-main);
+}
 
