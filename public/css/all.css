@@ -2531,6 +2531,43 @@ body > [data-modal] {
 .testimony-block .items .item .order a:hover {
   color: var(--color-main);
 }
+.testimony-2-block .inner {
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 5px 10px 0 rgba(20, 20, 20, 0.2);
+  padding: 40px 60px 60px;
+  max-width: 1160px;
+  box-sizing: border-box;
+}
+.testimony-2-block .inner .items {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 50px;
+}
+.testimony-2-block .inner .items .item .img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  width: 60px;
+  height: 60px;
+}
+.testimony-2-block .inner .items .item .img img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+.testimony-2-block .inner .items .item .name {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--color-main);
+  margin-bottom: 7px;
+}
+.testimony-2-block .inner .items .item .text {
+  line-height: 1.33;
+}
 
 
 @media screen and (max-width: 1200px) {
