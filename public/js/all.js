@@ -291,6 +291,22 @@ animateIn:!1},e.prototype.swap=function(){if(1===this.core.settings.items&&a.sup
                     .toggleClass('visible');
             });
 
+        $('.prices-page [data-tab-link]')
+            .once('tab')
+            .click(function (e) {
+                e.preventDefault();
+
+                let $this = $(this);
+                let key = $this.attr('data-tab-link');
+                let wrapper = $this.closest('.prices-page');
+
+                wrapper.find('[data-tab-link]').removeClass('active');
+                wrapper.find('[data-tab-link="' + key + '"]').addClass('active');
+
+                wrapper.find('[data-tab-content]').removeClass('active');
+                wrapper.find('[data-tab-content="' + key + '"]').addClass('active');
+            });
+
     }
 
 
